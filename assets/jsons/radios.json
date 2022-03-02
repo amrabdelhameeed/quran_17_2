@@ -1,5 +1,12 @@
 {
-	"Radios": [
+	"Radios": [		
+	{
+		"bool": false,
+		"fav":false,
+		"id": "150",
+		"Name": "اذاعة القران الكريم من القاهرة",
+		"URL":"https://stream.radiojar.com/8s5u5tpdtwzuv"
+	 },
 	{
 		"bool": false,
 			"fav":false,

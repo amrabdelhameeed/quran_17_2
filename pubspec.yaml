@@ -31,18 +31,18 @@ dependencies:
   cupertino_icons: ^1.0.2
   flutter:
     sdk: flutter
+  flutter_background: ^1.1.0
   flutter_bloc: ^8.0.1
+  flutter_offline: ^2.0.0
   hive: ^2.0.5
   hive_flutter: ^1.1.0
   path_provider: ^2.0.9
+  # workmanager: ^0.4.1
 
 dev_dependencies:
-  build_runner: ^2.1.1
   flutter_lints: ^1.0.0
   flutter_test:
     sdk: flutter
-  hive_generator: ^1.1.2
-
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 # The following section is specific to Flutter.
@@ -58,9 +58,16 @@ flutter:
     - assets/images/play.png
     - assets/images/pause.png
     - assets/images/border.png
+    - assets/images/next.png
+    - assets/images/shuffle.png
+    - assets/images/back.png
     - assets/jsons/surah.json
     - assets/jsons/reciters.json
     - assets/jsons/radios.json
+    - assets/images/replay.png
+    - assets/images/radio.png
+    - assets/images/notfound.png
+    - assets/images/radioaa.jpg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
   # For details regarding adding assets from package dependencies, see
@@ -70,10 +77,10 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  # fonts:
-  #   - family: Schyler
-  #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
+  fonts:
+    - family: a
+      fonts:
+        - asset: assets/fonts/Cairo-Regular.ttf
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
   #   - family: Trajan Pro

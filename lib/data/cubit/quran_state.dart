@@ -5,6 +5,10 @@ abstract class QuranState {}
 
 class QuranInitial extends QuranState {}
 
+class FavouriteFilter extends QuranState {}
+
+class SetAudioPlayer extends QuranState {}
+
 class SurahsListPage extends QuranState {}
 
 class SearchState extends QuranState {}

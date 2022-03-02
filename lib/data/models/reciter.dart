@@ -39,7 +39,7 @@ class Reciter {
         'letter': letter,
         'suras': suras
       };
-  toogleFavourite() {
-    isFav = !isFav!;
+  toogleFavourite({bool? bl}) {
+    isFav = bl ?? !isFav!;
   }
 }

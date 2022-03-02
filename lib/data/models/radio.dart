@@ -31,7 +31,7 @@ class RadioModel {
     isPlay = true;
   }
 
-  void toogleFavourite() {
-    isFav = !isFav;
+  void toogleFavourite({bool? bl}) {
+    isFav = bl ?? !isFav;
   }
 }

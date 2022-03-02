@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:quran_17_2/data/cubit/quran_cubit.dart';
+import '../../../data/cubit/quran_cubit.dart';
 
 Widget bottomNavBar(QuranCubit cubit) {
   return BottomNavigationBar(
@@ -9,10 +9,11 @@ Widget bottomNavBar(QuranCubit cubit) {
     onTap: (ind) {
       cubit.changeNavBarIndex(ind);
     },
-    selectedItemColor: Colors.teal,
+    unselectedItemColor: Colors.teal,
+    selectedItemColor: Colors.white,
     items: const [
-      BottomNavigationBarItem(icon: Icon(Icons.radio), label: "Radio"),
-      BottomNavigationBarItem(icon: Icon(Icons.people), label: "Reciters"),
+      BottomNavigationBarItem(icon: Icon(Icons.radio), label: "راديو"),
+      BottomNavigationBarItem(icon: Icon(Icons.people), label: "القراء"),
     ],
   );
 }

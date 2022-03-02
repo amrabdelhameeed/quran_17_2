@@ -1,7 +1,7 @@
-import 'package:quran_17_2/data/json_reader/json_reader.dart';
-import 'package:quran_17_2/data/models/radio.dart';
-import 'package:quran_17_2/data/models/reciter.dart';
-import 'package:quran_17_2/data/models/surah_model.dart';
+import '../json_reader/json_reader.dart';
+import '../models/radio.dart';
+import '../models/reciter.dart';
+import '../models/surah_model.dart';
 
 class SurahsRepository {
   final JsonReader reader;

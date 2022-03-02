@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:quran_17_2/data/cubit/quran_cubit.dart';
-import 'package:quran_17_2/presentation/widgets/reciter_item.dart';
+import '../../../data/cubit/quran_cubit.dart';
+import '../reciter_item.dart';
 
 class ListViewBuilder extends StatelessWidget {
   ListViewBuilder({Key? key, required this.cubit, required this.list})
@@ -10,27 +10,61 @@ class ListViewBuilder extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Expanded(
-      flex: 4,
-      child: ListView.builder(
-        shrinkWrap: true,
-        itemCount: list.length,
-        itemBuilder: (context, index) {
-          return InkWell(
-              onTap: () {
-                if (cubit.navBarIndex == 1 && !cubit.isReciterPageOpened) {
-                  cubit.getListOfAudios(cubit.reciters[index]);
-                  cubit.openOrCloseReciterPage(true);
-                } else if (cubit.navBarIndex == 1 &&
-                    cubit.isReciterPageOpened) {
-                  print(cubit.curReciter);
-                  cubit.play(cubit.curReciter, index);
-                } else if (cubit.navBarIndex == 0) {
-                  cubit.playRadio(index);
-                }
+      flex: 12,
+      child: list.isNotEmpty
+          ? ListView.builder(
+              controller: cubit.scrollController,
+              shrinkWrap: true,
+              itemCount: list.length,
+              itemBuilder: (context, index) {
+                return InkWell(
+                    onTap: () {
+                      if (cubit.navBarIndex == 1 &&
+                          !cubit.isReciterPageOpened) {
+                        if (cubit.isSearch) {
+                          if (!cubit.isFavourite) {
+                            cubit
+                                .getListOfAudios(cubit.searchedReciters[index]);
+                          } else {
+                            cubit.getListOfAudios(cubit.searchedReciters
+                                .where((element) => element.isFav!)
+                                .toList()[index]);
+                          }
+                        } else {
+                          if (!cubit.isFavourite) {
+                            cubit.getListOfAudios(cubit.reciters[index]);
+                          } else {
+                            cubit.getListOfAudios(cubit.reciters
+                                .where((element) => element.isFav!)
+                                .toList()[index]);
+                          }
+                        }
+                        cubit.openOrCloseReciterPage(true);
+                      } else if (cubit.navBarIndex == 1 &&
+                          cubit.isReciterPageOpened) {
+                        // print(cubit.curReciter);
+                        cubit.play(index);
+                      } else if (cubit.navBarIndex == 0) {
+                        cubit.playRadio(index);
+                      }
+                    },
+                    child: ReciterItem(cubit: cubit, index: index, list: list));
               },
-              child: ReciterItem(cubit: cubit, index: index, list: list));
-        },
-      ),
+            )
+          : Center(
+              child: Column(
+                children: [
+                  Image.asset("assets/images/notfound.png"),
+                  const SizedBox(
+                    height: 20,
+                  ),
+                  const Text(
+                    "لا يوجد نتائج :(",
+                    style: TextStyle(fontSize: 23, color: Colors.white),
+                  )
+                ],
+              ),
+            ),
     );
   }
 }

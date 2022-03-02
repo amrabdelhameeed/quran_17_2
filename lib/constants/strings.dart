@@ -1,6 +1,8 @@
-import 'package:assets_audio_player/assets_audio_player.dart';
+import 'package:flutter/cupertino.dart';
 
 const String home = "/";
 const String reciterPage = "/reciterPage";
 const String mainScreen = "/reciterPage";
-AssetsAudioPlayer assetsAudioPlayer = AssetsAudioPlayer.withId("id5");
+List<int>? favouritesRadios;
+List<int>? favouritesReciters;
+TextEditingController textEditingController = TextEditingController();
