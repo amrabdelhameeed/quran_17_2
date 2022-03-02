@@ -1,16 +1,8 @@
 # quran_17_2
-
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+<img src="https://github.com/amrabdelhameeed/quran_17_2/blob/b0de90af36023e9b4b1c4833718cb81e8cefbb30/screenshoots/mp3-Quran%201.jpg" width="400">
+<img src="https://github.com/amrabdelhameeed/quran_17_2/blob/b0de90af36023e9b4b1c4833718cb81e8cefbb30/screenshoots/mp3-Quran%202.jpg" width="400">
+<img src="https://github.com/amrabdelhameeed/quran_17_2/blob/b0de90af36023e9b4b1c4833718cb81e8cefbb30/screenshoots/mp3-Quran%203.jpg" width="400">
+<img src="https://github.com/amrabdelhameeed/quran_17_2/blob/b0de90af36023e9b4b1c4833718cb81e8cefbb30/screenshoots/mp3-Quran%204.jpg" width="400">
+<img src="https://github.com/amrabdelhameeed/quran_17_2/blob/b0de90af36023e9b4b1c4833718cb81e8cefbb30/screenshoots/mp3-Quran%205.jpg" width="400">
+<img src="https://github.com/amrabdelhameeed/quran_17_2/blob/b0de90af36023e9b4b1c4833718cb81e8cefbb30/screenshoots/mp3-Quran%206.jpg" width="400">
+<img src="https://github.com/amrabdelhameeed/quran_17_2/blob/b0de90af36023e9b4b1c4833718cb81e8cefbb30/screenshoots/mp3-Quran%207.jpg" width="400">
